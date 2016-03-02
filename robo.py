@@ -1,5 +1,4 @@
-# Stabilisierung periode 8 orbit klappt nicht.... !!!!!  ?????
-
+# Stabilizing orbit 8
 
 import numpy as np
 import pylab as py
