@@ -1,2 +1,3 @@
-# Chaos_control_in_walking_robots
-k
+# Robot_neural_control
+
+This code simulates the neural control of an autonomous walking robot. The neural control of robots is an alternative to conventional control mechanisms since it enables a self organized adjustment of the robot's motions to a changing environment, i.e. the robot udergoes a learning process. On each of its six legs, the robot has sensors that are sensitive to contact, acceleration, current, infrared, sound and light. The signals of those sensors can be used to adjust the motions of the robot to its surroundings. The robot is controled by an artificial neural network consisting of two neurons. Depending on the incoming sensor signals, the network generates suitable movement patterns. The neural network is a coupled nonlinear system that can show chaotic behaviour. To control the robotic movements, the neural network has to be controled in such a way that it is not chaotic anymore.
