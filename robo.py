@@ -1,21 +1,21 @@
-# Stabilizing orbit 8
+# Stabilizing periodic orbits that lead to different movement patterns of the robot
 
 import numpy as np
 import pylab as py
 
-def sigma(x): return (1.+np.exp(-x))**-1
-def x_tp1(theta,w,x,c): return sigma(theta+np.dot(w,x)+c)
-def cont(mu,w,delta): return mu*np.dot(w,delta)
-def mu_tp1(mu,lam,delta,p): return mu+lam*(delta[0]**2+delta[1]**2)*p**-1
+def sigma(x): return (1.+np.exp(-x))**-1                  #sigmoid activation function 
+def x_tp1(theta,w,x,c): return sigma(theta+np.dot(w,x)+c) #activity state of neuron (network output)
+def cont(mu,w,delta): return mu*np.dot(w,delta)           #control signal
+def mu_tp1(mu,lam,delta,p): return mu+lam*(delta[0]**2+delta[1]**2)*p**-1  #control strength
 
 
 t=range(0,700)
-w=np.array([[-22.0,5.9],[-6.6,0.0]])
-theta=np.array([-3.4,3.8])
+w=np.array([[-22.0,5.9],[-6.6,0.0]]) #synaptic weight between neurons
+theta=np.array([-3.4,3.8])           #bias
 f=py.figure(figsize=(12,8))
 i=1
-for p in [0,1,4,5,7,9]:
-	mu=-1
+for p in [0,1,4,5,7,9]: 3   #p is the period of the orbit
+	mu=-1               
 	x=[np.array([0.,1.])]
 	for step in t[1:300]:
 		x.append(x_tp1(theta,w,x[-1],0.))
