@@ -4,4 +4,4 @@ This code simulates the neural control of an autonomous walking robot. This kind
 
 
 
-Reference: S. Steingrube, M. Timme, F. Wörgötter, P. Manoonpong: *Self-organized adaptionof a simple neural circuit enables complex robot behaviour*, Nature Physics 6, 224(2010)
+Reference: S. Steingrube, M. Timme, F. Wörgötter, P. Manoonpong: *Self-organized adaption of a simple neural circuit enables complex robot behaviour*, Nature Physics 6, 224(2010)
